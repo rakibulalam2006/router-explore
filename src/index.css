@@ -2,3 +2,9 @@
 @plugin "daisyui" {
   themes: light --default, dark, cupcake,forest,cyberpunk,synthwave;
 }
+
+a.active{
+  color:blue;
+  background-color:#87CEEB;
+  font-weight:700;
+}

@@ -1,5 +1,5 @@
 import React, { use } from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import ThemeToggle from "./ThemeToggle";
 import { ShoppingCart } from "lucide-react";
 import { CartContext } from "../Provider/CartContext";
@@ -33,21 +33,27 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
              <li>
-              <Link to="/">Home</Link>
+              <NavLink 
+              // className={({isActive})=>isActive?'bg-red-500':''}
+              to="/">Home</NavLink>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <NavLink 
+              // className={({isActive})=>isActive?'bg-red-500':''}
+              to="/contact">Contact</NavLink>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <NavLink 
+              // className={({isActive})=>isActive?'bg-red-500':''}
+              to="/about">About</NavLink>
             </li>
             <li>
-              <Link className="relative" to='/cart'>
+              <NavLink className="relative" to='/cart'>
               <div >
                 <ShoppingCart />
                 <p className="absolute text-xl font-semibold top-1 -right-3">{cart.length}</p>
               </div>
-              </Link>
+              </NavLink>
             </li>
             </ul>
           </div>
@@ -56,21 +62,27 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
            <li>
-              <Link to="/">Home</Link>
+              <NavLink 
+              // className={({isActive})=>isActive?'bg-red-500':''}
+              to="/">Home</NavLink>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <NavLink 
+              // className={({isActive})=>isActive?'bg-red-500':''}
+              to="/contact">Contact</NavLink>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <NavLink 
+              // className={({isActive})=>isActive?'bg-red-500':''}
+              to="/about">About</NavLink>
             </li>
             <li>
-              <Link className="relative" to='/cart'>
+              <NavLink className="relative" to='/cart'>
               <div >
                 <ShoppingCart />
                 <p className="absolute text-xl font-semibold top-1 -right-3">{cart.length}</p>
               </div>
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
